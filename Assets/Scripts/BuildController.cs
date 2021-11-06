@@ -11,13 +11,13 @@ public class BuildController : MonoBehaviour
 
     private void Awake()
     {
-        Cursor.OnClickObj += Click;
+        Cursor.OnClickBuildingBlock += Click;
         Cursor.OnClickEmpty += EmptyClick;
     }
 
     private void EmptyClick()
-    {
-        if (TryToSetBuilding())
+    {        
+        if (selectedObject)
         {
             selectedObject.UnSetCaught();
             selectedObject = null;
@@ -26,9 +26,13 @@ public class BuildController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (selectedObject)
+        if (selectedObject && Input.GetMouseButton(0))
         {
             SetObjPosToCursorPos(selectedObject);
+        }
+        else if(selectedObject)
+        {
+            EmptyClick();
         }
     }
 
@@ -49,13 +53,13 @@ public class BuildController : MonoBehaviour
     {
         if (gameObject == null) return;
         var setVelocity = Cursor.CalculateCurrentCursorPos() - selectedObject.transform.position;
-        Debug.Log(setVelocity);
+        //Debug.Log(setVelocity);
         gameObject.myRigidBody.velocity = setVelocity*10;
         //gameObject.myRigidBody.MovePosition(Cursor.CalculateCurrentCursorPos());
     }
 
     private void OnDestroy()
     {
-        Cursor.OnClickObj -= Click;
+        Cursor.OnClickBuildingBlock -= Click;
     }
 }
