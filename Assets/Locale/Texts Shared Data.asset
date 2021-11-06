@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Texts Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Texts
+  m_TableCollectionNameGuidString: 95f3c4be4bffefc4bb93e9c6029eb588
+  m_Entries:
+  - m_Id: 213230870528
+    m_Key: opt-start-game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2814714372096
+    m_Key: opt-authors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2992993263616
+    m_Key: opt-exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3083393097728
+    m_Key: title-pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3097653731328
+    m_Key: opt-resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3151177244672
+    m_Key: opt-leave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3192394670080
+    m_Key: opt-restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20415301607424
+    m_Key: title-gameover
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1636149315473
