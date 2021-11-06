@@ -872,7 +872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cursor: {fileID: 849577866}
-  Prefab: {fileID: 9059583886862103013, guid: c441ad13c2f7a834a949ebe45e6c6b5c, type: 3}
+  Prefab: {fileID: 9059583886862103013, guid: 67e781e3beeb9e04bb28d4031495d058, type: 3}
   HouseController: {fileID: 849577869}
 --- !u!114 &849577869
 MonoBehaviour:
