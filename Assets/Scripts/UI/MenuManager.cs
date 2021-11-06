@@ -63,6 +63,7 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         instance = this;
+        soundsManager = FindObjectOfType<SoundsManager>();
         var allButtons = transform.GetComponentsInChildren<Button>(true);
         foreach (var btn in allButtons) WireupButtonSounds(btn);
 
