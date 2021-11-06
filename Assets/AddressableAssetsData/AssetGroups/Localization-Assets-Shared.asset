@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_Data:
     m_SerializedData: []
-  m_GUID: b1b57f31aeb0ca247a179b31a66a1e78
+  m_GUID: 6a7c7e330e601db4388874121edc5778
   m_SerializeEntries:
   - m_GUID: 95f3c4be4bffefc4bb93e9c6029eb588
     m_Address: Texts Shared Data
@@ -24,8 +24,8 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
-  m_Settings: {fileID: 11400000, guid: fb9ae8baf107f894fbfad7c8a08df18f, type: 2}
+  m_Settings: {fileID: 11400000, guid: 20c082232cffb674cb9699455c39b344, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: f73343edd7ae2e14f9d9bf20915aefdb, type: 2}
-    - {fileID: 11400000, guid: bb3b97fb0078f21458e430b9488795cd, type: 2}
+    - {fileID: 11400000, guid: 008e8dcff50855c4bb21057e6267fe39, type: 2}
+    - {fileID: 11400000, guid: 1a985a6c5029e03498afcdb0942346b7, type: 2}

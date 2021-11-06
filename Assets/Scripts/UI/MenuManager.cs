@@ -45,6 +45,11 @@ public class MenuManager : MonoBehaviour
         pageSwitcher[cmdName]();
     }
 
+    public void ToggleBackgroundSound()
+    {
+        soundsManager.ToggleBackgroundSound();
+    }
+
     public void SetLocale(Toggle selector)
     {
         if (!selector.isOn) return;

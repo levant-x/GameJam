@@ -1,4 +1,3 @@
-
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!11 &1
@@ -17,4 +16,4 @@ AudioManager:
   m_AmbisonicDecoderPlugin: 
   m_DisableAudio: 0
   m_VirtualizeEffects: 1
-  m_RequestedDSPBufferSize: 1024
+  m_RequestedDSPBufferSize: 0

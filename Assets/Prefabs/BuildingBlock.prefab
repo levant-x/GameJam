@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionChecker: {fileID: 9059583886862103014}
+  BlockType: 0
   myRigidBody: {fileID: 9059583886862103012}
 --- !u!114 &9059583886862103014
 MonoBehaviour:
