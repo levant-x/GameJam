@@ -14,7 +14,7 @@ public class BuildingBlock : MonoBehaviour
     Collider2D myCollider;
     public Rigidbody2D myRigidBody;
     HouseController HouseController;
-
+    
     private void Awake()
     {
         WaitInit();
