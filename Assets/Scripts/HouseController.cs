@@ -32,11 +32,13 @@ public class HouseController : MonoBehaviour
 
     public void AddBlock(BuildingBlock block, BuildingBlock collidedBlock)
     {
-        var found = GetHouse(collidedBlock);
+        var house = GetHouse(collidedBlock);
         if (HasBlock(block)) return;
 
-        if (found?.AddBlock(block) ?? false)
-            ScoreController.AddScore(); 
+        if (house?.AddBlock(block) ?? false)
+        {            
+            ScoreController.AddScore(house, block); 
+        }
     }
     House GetHouse(BuildingBlock block) => Houses.Find((x) => x.blocks.Contains(block));
 }
@@ -63,11 +65,7 @@ public class House
     public void RemoveBlocks(BuildingBlock block)
     {
         var ind = blocks.IndexOf(block);
-
-        for (int i = ind; i < blocks.Count; i++)
-        {
-            blocks[i].DestroyBlock();
-        }
-        blocks.RemoveRange(ind, blocks.Count - ind);
+        blocks[ind].DestroyBlock();
+        blocks.Remove(block);
     }
 }

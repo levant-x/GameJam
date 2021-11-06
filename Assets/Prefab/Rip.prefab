@@ -71,6 +71,11 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9059583886862103013, guid: 67e781e3beeb9e04bb28d4031495d058,
+        type: 3}
+      propertyPath: BlockType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9059583886862103015, guid: 67e781e3beeb9e04bb28d4031495d058,
         type: 3}
       propertyPath: m_RootOrder

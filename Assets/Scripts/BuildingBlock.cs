@@ -6,6 +6,7 @@ public class BuildingBlock : MonoBehaviour
     public event Action OnDestroyAction;
     
     public CollisionChecker CollisionChecker;
+    public BuildingBlockType BlockType;
 
     public bool IsColliding { get; private set; }
     public bool IsCaught { get; private set; }
