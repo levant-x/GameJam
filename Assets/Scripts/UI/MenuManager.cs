@@ -8,10 +8,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Localization.Settings;
 
+
 enum LocaleType
 {
     EN, RU
 }
+
 
 public class MenuManager : MonoBehaviour
 {
