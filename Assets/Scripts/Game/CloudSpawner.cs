@@ -21,10 +21,14 @@ public class CloudSpawner : MonoBehaviour
     public float DropDelay = 1.5f;
     public float ResetDelay = 1.5f;
     public Vector3 WindDirection;
+
+    SoundsManager soundsManager;
+
     private void Awake()
     {
         //CursorController.OnClickObject += OnClick;
         CloudClick.OnClickCloud += OnClick;
+        soundsManager = FindObjectOfType<SoundsManager>();
     }
 
     void Test(Collider2D sender)
@@ -40,6 +44,7 @@ public class CloudSpawner : MonoBehaviour
         myCollider.enabled = false;
         template.transform.SetParent(blockContainer);
         template.WakeUp();
+        soundsManager.PlayCloudExplode();
         CloudExplode.Play("CloudExplode");
         StartCoroutine(Hide());
         template = null;

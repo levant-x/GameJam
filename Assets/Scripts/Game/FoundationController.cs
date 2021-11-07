@@ -5,10 +5,19 @@ using UnityEngine;
 public class FoundationController : MonoBehaviour
 {
     public HouseController HouseController;
+    SoundsManager soundsManager;
+    private void Awake()
+    {
+        soundsManager = FindObjectOfType<SoundsManager>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent(out BuildingBlock startBlock))
         {
+            if (startBlock.IsFirstCollide)
+                soundsManager.PlayBlockNextCollide(); 
+
             if (HouseController.HasBlock(startBlock))
             {
                 HouseController.RemoveBlocks(startBlock);

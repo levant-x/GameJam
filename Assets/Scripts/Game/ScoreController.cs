@@ -12,7 +12,7 @@ public class ScoreController : MonoBehaviour
     public string title = "Score: ";
     int _score = 0;
     public Timer timer;
-
+    SoundsManager soundsManager;
     public List<ScoreRule> rules = new List<ScoreRule>();
     private void Awake()
     {
@@ -30,8 +30,11 @@ public class ScoreController : MonoBehaviour
         int result = 0;
         foreach (var rule in rules)
             if (rule.CheckRule(house, block, out result))
+            {
+                soundsManager.PlayAddScore();
                 break;
-       
+            }
+        
         return result;
     }    
 
@@ -42,7 +45,6 @@ public class ScoreController : MonoBehaviour
     }
     public void AddScore(int score = 1)
     {
-
         _score += score;
         UpdateScore();
     }

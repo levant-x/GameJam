@@ -14,12 +14,17 @@ public class BuildingBlock : MonoBehaviour
     Collider2D myCollider;
     public Rigidbody2D myRigidBody;
     HouseController HouseController;
-    
+
+
+    public bool IsFirstCollide;
+    SoundsManager soundsManager;
+
     private void Awake()
     {
         WaitInit();
         CollisionChecker.IsCollide += ChangeAreaHiglight;
         HouseController = FindObjectOfType<HouseController>();
+        soundsManager = FindObjectOfType<SoundsManager>();
     }
 
     public void Sleep()
@@ -38,6 +43,11 @@ public class BuildingBlock : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent(out BuildingBlock building))
         {
+            if (IsFirstCollide)
+                soundsManager.PlayBlockFirstCollide();
+            else
+                soundsManager.PlayBlockNextCollide();
+
             if (!building.IsCaught)
             {
                 HouseController.AddBlock(this, building);
