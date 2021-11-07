@@ -54,7 +54,9 @@ public class AuthorsToggler : MonoBehaviour
         var labelsOut = DOTween.Sequence();
         foreach (var lbl in labels)
         {
-            labelsIn.Join(lbl.DOColor(Color.white, pnlAppearDur));
+            var color = lbl.name == "lblName" ?
+                Color.white : new Color(1, 1, 1, .5f);
+            labelsIn.Join(lbl.DOColor(color, pnlAppearDur));
             labelsOut.Join(lbl.DOFade(0, pnlAppearDur));
         }
         labelsIn.Pause().SetAutoKill(false);

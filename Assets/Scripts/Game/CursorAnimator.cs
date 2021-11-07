@@ -15,7 +15,7 @@ public class CursorAnimator : MonoBehaviour
 
     public void SetCursor(CursorType type)
     {
-        Cursor.SetCursor(cursors[(int)type], new Vector2(32, 45), CursorMode.ForceSoftware);
+        Cursor.SetCursor(cursors[(int)type], new Vector2(15, 10), CursorMode.ForceSoftware);
     }
 
     private void Update()
