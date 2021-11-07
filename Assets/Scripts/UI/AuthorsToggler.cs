@@ -6,21 +6,28 @@ using UnityEngine.UI;
 
 public class AuthorsToggler : MonoBehaviour
 {
-    [SerializeField] private float pnlAppearDur = .2f;
-    [SerializeField] private float imgBrandAppearDur = .1f;
-    [SerializeField] private Image imgBrand;
+    [SerializeField] protected float pnlAppearDur = .2f;
+    [SerializeField] protected float imgBrandAppearDur = .1f;
+    [SerializeField] protected Image imgBrand;
 
-    private const float LEFT_OFFSET = 78f;
+    protected const float LEFT_OFFSET = 78f;
+    protected Image imgBackgr;
+    protected Text[] labels;
+
+    private float initXPos;
     private Color imgBgInitColor;
     private Color imgBrandInitColor;
-    private Image imgBackgr;
     private Sequence tweenIn;
     private Sequence tweenOut;
 
-    public void Popup(bool toShow)
+    public virtual void Popup(bool toShow)
     {
         if (toShow) gameObject.SetActive(true);
-        else tweenOut.Play();
+        else
+        {
+            tweenOut.Restart();
+            tweenOut.Play();
+        }
     }
 
     private void Awake()
@@ -28,9 +35,15 @@ public class AuthorsToggler : MonoBehaviour
         imgBackgr = GetComponent<Image>();
         imgBgInitColor = imgBackgr.color;
         imgBrandInitColor = imgBrand.color;
+        labels = transform.GetComponentsInChildren<Text>();
+        ApplyTween();
+    }
 
+    protected void ApplyTween()
+    {
         MenuManager.SetImgTransparency(imgBackgr, imgBgInitColor.a, true);
         transform.localPosition += Vector3.left * LEFT_OFFSET;
+        initXPos = transform.localPosition.x;
         InitAnim();
     }
 
@@ -38,18 +51,26 @@ public class AuthorsToggler : MonoBehaviour
     {
         tweenIn = DOTween.Sequence()
             .Join(imgBackgr.DOColor(imgBgInitColor, pnlAppearDur))
-            .Join(transform.DOLocalMoveX(LEFT_OFFSET, pnlAppearDur))
-            .Join(imgBrand.DOFade(0, imgBrandAppearDur));
+            .Join(transform.DOLocalMoveX(initXPos + LEFT_OFFSET, pnlAppearDur))
+            .Join(imgBrand.DOFade(0, imgBrandAppearDur))
+            .Pause()
+            .SetAutoKill(false); 
 
         tweenOut = DOTween.Sequence()
             .Join(imgBackgr.DOFade(0, pnlAppearDur))
-            .Join(transform.DOLocalMoveX(-LEFT_OFFSET, pnlAppearDur))
-            .Join(imgBrand.DOColor(imgBrandInitColor, imgBrandAppearDur))
-            .OnComplete(() => gameObject.SetActive(false));
+            .Join(transform.DOLocalMoveX(initXPos, pnlAppearDur))
+            .OnComplete(() =>
+            {
+                imgBrand.DOColor(imgBrandInitColor, imgBrandAppearDur)
+                    .OnComplete(() => gameObject.SetActive(false));
+            })            
+            .Pause()
+            .SetAutoKill(false);
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
+        tweenIn.Restart();
         tweenIn.Play();
     }
 }

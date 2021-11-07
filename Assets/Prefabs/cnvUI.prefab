@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 472, y: -309}
-  m_SizeDelta: {x: 300, y: 92}
+  m_AnchoredPosition: {x: 430, y: -309}
+  m_SizeDelta: {x: 350, y: 92}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1589649892807810320
 GameObject:
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 7764478801838870400}
   - component: {fileID: 8359908431955500789}
   - component: {fileID: 8497817233558051570}
-  - component: {fileID: 8710718739419792065}
+  - component: {fileID: 7239740608504993703}
   m_Layer: 5
   m_Name: pnlAuthors
   m_TagString: Untagged
@@ -264,8 +264,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 39, y: 0}
+  m_SizeDelta: {x: 78, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8359908431955500789
 CanvasRenderer:
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8710718739419792065
+--- !u!114 &7239740608504993703
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64300636416fbfc4b827866f14cbae3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pnlAppearDur: 0.4
+  pnlAppearDur: 0.45
   imgBrandAppearDur: 0.1
   imgBrand: {fileID: 6951774899195855511}
 --- !u!1 &2344213048190622153
@@ -706,7 +706,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 78, y: -309}
-  m_SizeDelta: {x: 300, y: 92}
+  m_SizeDelta: {x: 330, y: 92}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &3490352478288908499
 GameObject:
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8710718739419792065}
+      - m_Target: {fileID: 7239740608504993703}
         m_MethodName: Popup
         m_Mode: 0
         m_Arguments:
@@ -5671,7 +5671,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 78, y: -165}
-  m_SizeDelta: {x: 300, y: 92}
+  m_SizeDelta: {x: 330, y: 92}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6457082586965660829
 GameObject:
@@ -6160,7 +6160,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 78, y: -467}
-  m_SizeDelta: {x: 300, y: 92}
+  m_SizeDelta: {x: 400, y: 92}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &8192169050004834624
 GameObject:
@@ -6500,8 +6500,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 472, y: -165}
-  m_SizeDelta: {x: 300, y: 92}
+  m_AnchoredPosition: {x: 430, y: -165}
+  m_SizeDelta: {x: 350, y: 92}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &9037356073489749084
 GameObject:
