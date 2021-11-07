@@ -307,6 +307,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2129948365700488493, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3921228244325518464, guid: aba535d55f9c2a24eac69d2c80c2457b,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -321,6 +326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -370
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921228244347449680, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3921228244347449681, guid: aba535d55f9c2a24eac69d2c80c2457b,
         type: 3}
@@ -502,6 +512,16 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1318144762}
+    - target: {fileID: 3921228245562850465, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921228246060928136, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3921228246167572250, guid: aba535d55f9c2a24eac69d2c80c2457b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -595,6 +615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924680576733641225, guid: da2b86e26bbaf5a41b4b7e4c0d26a876,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da2b86e26bbaf5a41b4b7e4c0d26a876, type: 3}

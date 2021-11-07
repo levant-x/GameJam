@@ -55,6 +55,42 @@ MonoBehaviour:
     m_Key: title-score
     m_Metadata:
       m_Items: []
+  - m_Id: 308454594764800
+    m_Key: name-boyan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308787114991616
+    m_Key: role-dev
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308814533156864
+    m_Key: name-ant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308848431521792
+    m_Key: name-daniil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308874088079360
+    m_Key: role-game-des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308901904703488
+    m_Key: name-vikt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308986797416448
+    m_Key: role-art
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309016421785600
+    m_Key: name-konst
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309063515430912
+    m_Key: role-art-des
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

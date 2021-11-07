@@ -58,5 +58,41 @@ MonoBehaviour:
     m_Localized: Score
     m_Metadata:
       m_Items: []
+  - m_Id: 308454594764800
+    m_Localized: Boyan Evtushok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308814533156864
+    m_Localized: Anton Levchenko
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308787114991616
+    m_Localized: Unity Developer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308848431521792
+    m_Localized: Daniil Leshakov
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308874088079360
+    m_Localized: Game Designer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308901904703488
+    m_Localized: Victoria Izmailova
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308986797416448
+    m_Localized: 2D Artist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309063515430912
+    m_Localized: Soundtrack, SFX, UI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309016421785600
+    m_Localized: Kalinovsky Konstantin
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

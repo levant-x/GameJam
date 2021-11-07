@@ -58,5 +58,42 @@ MonoBehaviour:
     m_Localized: "\u0421\u0447\u0451\u0442"
     m_Metadata:
       m_Items: []
+  - m_Id: 308454594764800
+    m_Localized: "\u0411\u043E\u044F\u043D \u0415\u0432\u0442\u0443\u0448\u043E\u043A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308814533156864
+    m_Localized: "\u0410\u043D\u0442\u043E\u043D \u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308787114991616
+    m_Localized: Unity Developer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308848431521792
+    m_Localized: "\u0414\u0430\u043D\u0438\u0438\u043B \u041B\u0435\u0448\u0430\u043A\u043E\u0432"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308874088079360
+    m_Localized: Game Designer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308901904703488
+    m_Localized: "\u0412\u0438\u043A\u0442\u043E\u0440\u0438\u044F \u0418\u0437\u043C\u0430\u0439\u043B\u043E\u0432\u0430"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308986797416448
+    m_Localized: 2D Artist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309063515430912
+    m_Localized: Soundtrack, SFX, UI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309016421785600
+    m_Localized: "\u041A\u0430\u043B\u0438\u043D\u043E\u0432\u0441\u043A\u0438\u0439
+      \u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

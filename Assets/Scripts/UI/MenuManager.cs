@@ -42,6 +42,15 @@ public class MenuManager : MonoBehaviour
     {
         instance.pageGame.SetActive(false);
         instance.pageGameOver.SetActive(true);
+        SetImgTransparency(instance.imgOverlay, instance.overlayInitTransparency, false);
+    }
+
+    public static void SetImgTransparency(Image target, float aInit, bool transparent)
+    {
+        var initColor = target.color;
+        var a = transparent ? 0 : aInit;
+        target.color = new Color(initColor.r, initColor.g, initColor.b, a);
+        target.raycastTarget = !transparent;
     }
 
     public void SwitchPage(Button sender)
@@ -49,8 +58,9 @@ public class MenuManager : MonoBehaviour
         var cmdName = sender.name.Replace("btn", null);
         var parent = GetParentPageObj(sender.gameObject);
 
-        if (!pageSwitcher.ContainsKey(cmdName)) throw new Exception($"Command {cmdName} missing");        
-        SetOverlayTransparency(!parent.Equals(pageGame));
+        if (!pageSwitcher.ContainsKey(cmdName)) throw new Exception($"Command {cmdName} missing");
+        SetImgTransparency(instance.imgOverlay, instance.overlayInitTransparency, 
+            !parent.Equals(pageGame));
 
         parent.SetActive(false);
         pageSwitcher[cmdName]();
@@ -76,16 +86,18 @@ public class MenuManager : MonoBehaviour
         instance = this;
         imgOverlay = GetComponent<Image>();
         overlayInitTransparency = imgOverlay.color.a;
+
         soundsManager = FindObjectOfType<SoundsManager>();
         var allButtons = transform.GetComponentsInChildren<Button>(true);
         foreach (var btn in allButtons) WireupButtonSounds(btn);
 
+        Time.timeScale = 1;
         var currSceneName = SceneManager.GetActiveScene().name;
         if (currSceneName == "Menu") pageMain.SetActive(true);
         else if (currSceneName == "Game")
         {
             pageGame.SetActive(true);
-            SetOverlayTransparency(true);
+            SetImgTransparency(instance.imgOverlay, instance.overlayInitTransparency, true);
         }
     }
 
@@ -112,13 +124,6 @@ public class MenuManager : MonoBehaviour
     {
         if (target.name.Contains("Page")) return target;
         return GetParentPageObj(target.transform.parent.gameObject);
-    }
-
-    private void SetOverlayTransparency(bool transparent)
-    {
-        var overlayColor = imgOverlay.color;
-        var a = transparent ? 0 : overlayInitTransparency;
-        imgOverlay.color = new Color(overlayColor.r, overlayColor.g, overlayColor.b, a);
     }
 
     private static void Play()
