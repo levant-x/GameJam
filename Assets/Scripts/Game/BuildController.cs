@@ -4,7 +4,6 @@ using UnityEngine;
 public class BuildController : MonoBehaviour
 {
     public CursorController Cursor;
-    public BuildingBlock Prefab;
 
     BuildingBlock selectedObject;
     public HouseController HouseController;
@@ -36,12 +35,6 @@ public class BuildController : MonoBehaviour
         }
     }
 
-    bool TryToSetBuilding()
-    {
-        if (selectedObject == null) return false;
-        return true;
-    }
-
     private void Click(BuildingBlock obj)
     {
         if (HouseController.HasBlock(obj)) return;
@@ -53,9 +46,7 @@ public class BuildController : MonoBehaviour
     {
         if (gameObject == null) return;
         var setVelocity = Cursor.CalculateCurrentCursorPos() - selectedObject.transform.position;
-        //Debug.Log(setVelocity);
         gameObject.myRigidBody.velocity = setVelocity*10;
-        //gameObject.myRigidBody.MovePosition(Cursor.CalculateCurrentCursorPos());
     }
 
     private void OnDestroy()

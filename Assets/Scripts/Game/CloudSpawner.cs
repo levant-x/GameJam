@@ -12,8 +12,11 @@ public class CloudSpawner : MonoBehaviour
     public CursorController CursorController;
     public Collider2D myCollider;
     public Transform spawnPoint;
+    public Transform blockContainer;
+
     public float DropDelay = 1.5f;
     public float ResetDelay = 1f;
+    public Vector3 WindDirection;
     private void Awake()
     {
         CursorController.OnClickObject += OnClick;
@@ -25,6 +28,7 @@ public class CloudSpawner : MonoBehaviour
         if (CursorController.DelayBetweenClickOnCloud < DropDelay) return;
         CursorController.ResetTimerOnClick();
         myCollider.enabled = false;
+        template.transform.SetParent(blockContainer);
         template.WakeUp();
         template = null;
     }
@@ -42,6 +46,8 @@ public class CloudSpawner : MonoBehaviour
         }
         if(!template)
             time += Time.deltaTime;
+
+        transform.position += WindDirection;
     }
 
     private void OnDestroy()
