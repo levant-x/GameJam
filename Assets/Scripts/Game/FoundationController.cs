@@ -16,7 +16,7 @@ public class FoundationController : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out BuildingBlock startBlock))
         {
             if (!startBlock.WasFirstCollide)
-                soundsManager.PlayBlockNextCollide(); 
+                soundsManager.PlayBlockFirstCollide(); 
 
             if (HouseController.HasBlock(startBlock))
             {

@@ -441,6 +441,12 @@ PrefabInstance:
       propertyPath: toggleTransition
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3576562814956173422, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 37e760ce9d94b8b41ab8ffea8dd61170,
+        type: 3}
     - target: {fileID: 3921228244325518464, guid: aba535d55f9c2a24eac69d2c80c2457b,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -456,10 +462,40 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -370
       objectReference: {fileID: 0}
+    - target: {fileID: 3921228244679862037, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921228244679862037, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921228244679862037, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -291
+      objectReference: {fileID: 0}
     - target: {fileID: 3921228244904147407, guid: aba535d55f9c2a24eac69d2c80c2457b,
         type: 3}
       propertyPath: soundsManager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921228244937745201, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921228244937745201, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921228244937745201, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -370
       objectReference: {fileID: 0}
     - target: {fileID: 3921228245010777856, guid: aba535d55f9c2a24eac69d2c80c2457b,
         type: 3}
@@ -596,6 +632,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cnvUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3921228245535745252, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3921228246238006578, guid: aba535d55f9c2a24eac69d2c80c2457b,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -616,9 +657,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 556552372208965483, guid: aba535d55f9c2a24eac69d2c80c2457b, type: 3}
-    - {fileID: 4103248334884136763, guid: aba535d55f9c2a24eac69d2c80c2457b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aba535d55f9c2a24eac69d2c80c2457b, type: 3}
 --- !u!1 &797247558
 GameObject:
