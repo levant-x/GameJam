@@ -11,9 +11,17 @@ public class CursorAnimator : MonoBehaviour
 {
     [SerializeField] private Texture2D[] cursors;
     [SerializeField] private CursorType cursorType;
+    [SerializeField] private bool useGrabOnMouseDown = true;
 
     public void SetCursor(CursorType type)
     {
         Cursor.SetCursor(cursors[(int)type], new Vector2(32, 45), CursorMode.Auto);
+    }
+
+    private void Update()
+    {
+        if (!useGrabOnMouseDown) return;
+        if (Input.GetMouseButton(0)) SetCursor(CursorType.Grab);
+        else SetCursor(CursorType.Pointer);
     }
 }

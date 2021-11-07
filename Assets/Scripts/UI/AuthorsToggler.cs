@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -49,16 +50,28 @@ public class AuthorsToggler : MonoBehaviour
 
     private void InitAnim()
     {
+        var labelsIn = DOTween.Sequence();
+        var labelsOut = DOTween.Sequence();
+        foreach (var lbl in labels)
+        {
+            labelsIn.Join(lbl.DOColor(Color.white, pnlAppearDur));
+            labelsOut.Join(lbl.DOFade(0, pnlAppearDur));
+        }
+        labelsIn.Pause().SetAutoKill(false);
+        labelsOut.Pause().SetAutoKill(false);
+
         tweenIn = DOTween.Sequence()
             .Join(imgBackgr.DOColor(imgBgInitColor, pnlAppearDur))
             .Join(transform.DOLocalMoveX(initXPos + LEFT_OFFSET, pnlAppearDur))
             .Join(imgBrand.DOFade(0, imgBrandAppearDur))
+            .Join(labelsIn)
             .Pause()
             .SetAutoKill(false); 
 
         tweenOut = DOTween.Sequence()
             .Join(imgBackgr.DOFade(0, pnlAppearDur))
             .Join(transform.DOLocalMoveX(initXPos, pnlAppearDur))
+            .Join(labelsOut)
             .OnComplete(() =>
             {
                 imgBrand.DOColor(imgBrandInitColor, imgBrandAppearDur)
