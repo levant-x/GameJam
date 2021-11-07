@@ -42,15 +42,15 @@ public class MenuManager : MonoBehaviour
     {
         instance.pageGame.SetActive(false);
         instance.pageGameOver.SetActive(true);
-        SetImgTransparency(instance.imgOverlay, instance.overlayInitTransparency, false);
+        SetImgTransparency(instance.imgOverlay, instance.overlayInitTransparency, false, true);
     }
 
-    public static void SetImgTransparency(Image target, float aInit, bool transparent)
+    public static void SetImgTransparency(Image target, float aInit, bool transparent, bool blockRaycast = false)
     {
         var initColor = target.color;
         var a = transparent ? 0 : aInit;
         target.color = new Color(initColor.r, initColor.g, initColor.b, a);
-        target.raycastTarget = !transparent;
+        if (blockRaycast) target.raycastTarget = !transparent;
     }
 
     public void SwitchPage(Button sender)
@@ -60,7 +60,7 @@ public class MenuManager : MonoBehaviour
 
         if (!pageSwitcher.ContainsKey(cmdName)) throw new Exception($"Command {cmdName} missing");
         SetImgTransparency(instance.imgOverlay, instance.overlayInitTransparency, 
-            !parent.Equals(pageGame));
+            !parent.Equals(pageGame), true);
 
         parent.SetActive(false);
         pageSwitcher[cmdName]();
@@ -97,7 +97,7 @@ public class MenuManager : MonoBehaviour
         else if (currSceneName == "Game")
         {
             pageGame.SetActive(true);
-            SetImgTransparency(instance.imgOverlay, instance.overlayInitTransparency, true);
+            SetImgTransparency(instance.imgOverlay, instance.overlayInitTransparency, true, true);
         }
     }
 
