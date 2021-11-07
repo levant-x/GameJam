@@ -813,6 +813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: {fileID: 565872238}
   title: 
+  timer: {fileID: 1570155390}
   rules:
   - parts: 0200000002000000020000000200000002000000
     Score: 5
@@ -1272,8 +1273,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: cnvUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3921228245275487359, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921228246060928137, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 532.7345
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921228246241437044, guid: aba535d55f9c2a24eac69d2c80c2457b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aba535d55f9c2a24eac69d2c80c2457b, type: 3}
+--- !u!114 &1570155390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4868579053509915182, guid: aba535d55f9c2a24eac69d2c80c2457b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1570155389}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce4700d80188fb4f9545a0331b14c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1574731397
 PrefabInstance:
   m_ObjectHideFlags: 0

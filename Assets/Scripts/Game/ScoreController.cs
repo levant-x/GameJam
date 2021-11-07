@@ -11,9 +11,20 @@ public class ScoreController : MonoBehaviour
     public Text Score;
     public string title = "Score: ";
     int _score = 0;
+    public Timer timer;
 
     public List<ScoreRule> rules = new List<ScoreRule>();
+    private void Awake()
+    {
+        timer.SetTime(10);
+        timer.OnTimeElapsed += OnGametimeElapsed;
+    }
 
+    private void OnGametimeElapsed()
+    {
+        MenuManager.FinishGame();
+        timer.OnTimeElapsed -= OnGametimeElapsed;
+    }
     int GetCompleteRule(House house, BuildingBlock block)
     {
         int result = 0;
