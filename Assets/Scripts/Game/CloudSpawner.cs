@@ -8,16 +8,15 @@ public class CloudSpawner : MonoBehaviour
 {
     public GameObject[] Prefab;
     float time;
-    public Test Test;
     public BuildingBlock template;
     public CursorController CursorController;
     public Collider2D myCollider;
     public Transform spawnPoint;
     public float DropDelay = 1.5f;
-
+    public float ResetDelay = 1f;
     private void Awake()
     {
-        CursorController.OnObjectClick += OnClick;
+        CursorController.OnClickObject += OnClick;
     }
 
     private void OnClick(Collider2D collider)
@@ -32,7 +31,7 @@ public class CloudSpawner : MonoBehaviour
 
     void Update()
     {
-        if(time > Test.SpeedSlider.value)
+        if(time > ResetDelay)
         {
             int ind = Random.Range(0, Prefab.Length);
             var temp = Instantiate(Prefab[ind], spawnPoint);
@@ -41,12 +40,13 @@ public class CloudSpawner : MonoBehaviour
             myCollider.enabled = true;
             time = 0;
         }
-        if(!template) time += Time.deltaTime;
+        if(!template)
+            time += Time.deltaTime;
     }
 
     private void OnDestroy()
     {
-        CursorController.OnObjectClick -= OnClick;
+        CursorController.OnClickObject -= OnClick;
     }
 }
 

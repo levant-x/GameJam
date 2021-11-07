@@ -99,6 +99,32 @@ PolygonCollider2D:
       - {x: -1.0238624, y: -0.33874997}
       - {x: -1.0035627, y: -0.3336751}
       - {x: -0.9705758, y: -0.31210673}
+--- !u!61 &7131470863140738527
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6187339615073882591}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.598352, y: 0.6775}
+    newSize: {x: 20.786816, y: 5.42}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.598352, y: 1.43}
+  m_EdgeRadius: 0
 --- !u!1001 &2911510168483848247
 PrefabInstance:
   m_ObjectHideFlags: 0

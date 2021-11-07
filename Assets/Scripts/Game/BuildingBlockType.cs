@@ -6,4 +6,5 @@
     Rip = 3,
     Scull = 4,
     SmallBone = 5,
+    Egg = 6,
 }

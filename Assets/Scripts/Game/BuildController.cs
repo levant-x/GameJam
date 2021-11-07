@@ -11,11 +11,11 @@ public class BuildController : MonoBehaviour
 
     private void Awake()
     {
-        Cursor.OnBuildingBlockClick += OnBlockClick;
-        Cursor.OnEmptyClick += OnEmptyClick;
+        Cursor.OnClickBuildingBlock += Click;
+        Cursor.OnClickEmpty += EmptyClick;
     }
 
-    private void OnEmptyClick()
+    private void EmptyClick()
     {        
         if (selectedObject)
         {
@@ -32,7 +32,7 @@ public class BuildController : MonoBehaviour
         }
         else if(selectedObject)
         {
-            OnEmptyClick();
+            EmptyClick();
         }
     }
 
@@ -42,7 +42,7 @@ public class BuildController : MonoBehaviour
         return true;
     }
 
-    private void OnBlockClick(BuildingBlock obj)
+    private void Click(BuildingBlock obj)
     {
         if (HouseController.HasBlock(obj)) return;
         selectedObject = obj;
@@ -60,6 +60,6 @@ public class BuildController : MonoBehaviour
 
     private void OnDestroy()
     {
-        Cursor.OnBuildingBlockClick -= OnBlockClick;
+        Cursor.OnClickBuildingBlock -= Click;
     }
 }
