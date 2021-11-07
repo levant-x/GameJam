@@ -23,7 +23,13 @@ public class CloudSpawner : MonoBehaviour
     public Vector3 WindDirection;
     private void Awake()
     {
-        CursorController.OnClickObject += OnClick;
+        //CursorController.OnClickObject += OnClick;
+        CloudClick.OnClickCloud += OnClick;
+    }
+
+    void Test(Collider2D sender)
+    {
+        Debug.Log("sender: " + sender.name);
     }
 
     private void OnClick(Collider2D collider)

@@ -27,7 +27,6 @@ public class HouseController : MonoBehaviour
     {
         block.SetFoundation();
         Houses.Add(new House (block));
-        ScoreController.AddScore();
     }
 
     public void AddBlock(BuildingBlock block, BuildingBlock collidedBlock)

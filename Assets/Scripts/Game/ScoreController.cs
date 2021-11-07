@@ -16,7 +16,7 @@ public class ScoreController : MonoBehaviour
     public List<ScoreRule> rules = new List<ScoreRule>();
     private void Awake()
     {
-        timer.SetTime(10);
+        timer.SetTime(1000);
         timer.OnTimeElapsed += OnGametimeElapsed;
     }
 
