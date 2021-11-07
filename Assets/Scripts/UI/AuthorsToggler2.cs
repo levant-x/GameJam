@@ -8,7 +8,7 @@ public class AuthorsToggler2 : AuthorsToggler
     private Animator animator;
     private IEnumerable<AnimationClip> clips;
 
-    public override void Popup(bool toShow)
+    public override void Popup()
     {
         if (toShow) gameObject.SetActive(true);
         else Hide();

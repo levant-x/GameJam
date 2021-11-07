@@ -50,7 +50,7 @@ public class MenuManager : MonoBehaviour
         var initColor = target.color;
         var a = transparent ? 0 : aInit;
         target.color = new Color(initColor.r, initColor.g, initColor.b, a);
-        if (blockRaycast) target.raycastTarget = !transparent;
+        target.raycastTarget = blockRaycast;
     }
 
     public void SwitchPage(Button sender)

@@ -14,6 +14,7 @@ public class AuthorsToggler : MonoBehaviour
     protected const float LEFT_OFFSET = 78f;
     protected Image imgBackgr;
     protected Text[] labels;
+    protected bool toShow = true;
 
     private float initXPos;
     private Color imgBgInitColor;
@@ -21,7 +22,7 @@ public class AuthorsToggler : MonoBehaviour
     private Sequence tweenIn;
     private Sequence tweenOut;
 
-    public virtual void Popup(bool toShow)
+    public virtual void Popup()
     {
         if (toShow) gameObject.SetActive(true);
         else
@@ -29,6 +30,7 @@ public class AuthorsToggler : MonoBehaviour
             tweenOut.Restart();
             tweenOut.Play();
         }
+        toShow = !toShow;
     }
 
     private void Awake()
