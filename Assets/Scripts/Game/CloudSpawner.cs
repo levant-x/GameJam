@@ -17,7 +17,7 @@ public class CloudSpawner : MonoBehaviour
 
     private void Awake()
     {
-        CursorController.OnClickObject += OnClick;
+        CursorController.OnObjectClick += OnClick;
     }
 
     private void OnClick(Collider2D collider)
@@ -46,7 +46,7 @@ public class CloudSpawner : MonoBehaviour
 
     private void OnDestroy()
     {
-        CursorController.OnClickObject -= OnClick;
+        CursorController.OnObjectClick -= OnClick;
     }
 }
 

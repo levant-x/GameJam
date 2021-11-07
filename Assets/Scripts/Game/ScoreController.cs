@@ -3,20 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
 {
-    public TMP_Text Score;
+    public Text Score;
     public string title = "Score: ";
-    int _score = 0;
+    public Timer timer;
 
+    int _score = 0;
     ScoreRule first;
 
     private void Awake()
     {
-        var firstlist = new List<PartOfRule> { new PartOfRule(BuildingBlockType.Ghost), 
-                                               new PartOfRule(BuildingBlockType.Ghost) };
+        var firstlist = new List<PartOfRule> 
+        { 
+            new PartOfRule(BuildingBlockType.Ghost),
+            new PartOfRule(BuildingBlockType.Ghost) 
+        };
         first = new ScoreRule(firstlist, 5);
+
+        timer.SetTime(10);
+        timer.OnTimeElapsed += OnGametimeElapsed;
+    }
+
+    private void OnGametimeElapsed()
+    {
+        MenuManager.FinishGame();
+        timer.OnTimeElapsed -= OnGametimeElapsed;
     }
 
     int GetCompleteRule(House house, BuildingBlock block)

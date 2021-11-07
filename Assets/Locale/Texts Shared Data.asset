@@ -47,6 +47,14 @@ MonoBehaviour:
     m_Key: title-gameover
     m_Metadata:
       m_Items: []
+  - m_Id: 64547537608704
+    m_Key: title-timer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82720202743808
+    m_Key: title-score
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

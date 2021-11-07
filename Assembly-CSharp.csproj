@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\TMP\Test.cs" />
     <Compile Include="Assets\Scripts\UI\MenuManager.cs" />
     <Compile Include="Assets\Scripts\UI\SoundsManager.cs" />
+    <Compile Include="Assets\Scripts\UI\Timer.cs" />
     <Compile Include="Assets\Scripts\UI\ToggleDataEffector.cs" />
     <Compile Include="Assets\Shapes\Samples\Assets\Scripts\AmmoBar.cs" />
     <Compile Include="Assets\Shapes\Samples\Assets\Scripts\ChargeBar.cs" />

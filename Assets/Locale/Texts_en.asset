@@ -50,5 +50,13 @@ MonoBehaviour:
     m_Localized: Game over
     m_Metadata:
       m_Items: []
+  - m_Id: 64547537608704
+    m_Localized: Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82720202743808
+    m_Localized: Score
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
