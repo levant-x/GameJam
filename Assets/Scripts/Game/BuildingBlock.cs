@@ -16,7 +16,7 @@ public class BuildingBlock : MonoBehaviour
     HouseController HouseController;
 
 
-    public bool IsFirstCollide;
+    public bool WasFirstCollide;
     SoundsManager soundsManager;
 
     private void Awake()
@@ -43,8 +43,11 @@ public class BuildingBlock : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent(out BuildingBlock building))
         {
-            if (IsFirstCollide)
+            if (WasFirstCollide)
+            {
+                WasFirstCollide = true;
                 soundsManager.PlayBlockFirstCollide();
+            }
             else
                 soundsManager.PlayBlockNextCollide();
 

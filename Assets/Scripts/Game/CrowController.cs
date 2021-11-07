@@ -19,8 +19,8 @@ public class CrowController : MonoBehaviour
         {
             int randInd = Random.Range(0, Crows.Count);
             Crows[randInd].Launch();
-            if(!Crows[randInd].IsLaunch || !Crows[randInd].IsReturn)            
-                SoundManager.PlayCrowAppear();            
+            //if(!Crows[randInd].IsLaunch || !Crows[randInd].IsReturn)            
+                //SoundManager.PlayCrowAppear();            
             timer = 0;
         }
         else

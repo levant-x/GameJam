@@ -144,7 +144,7 @@ MonoBehaviour:
   onHoverSound: {fileID: 8300000, guid: e38116eba134a684d868974bcae24914, type: 3}
   onClickSound: {fileID: 8300000, guid: 01632c2ce8a78704eb0731dd469c4638, type: 3}
   onCrowAppear: {fileID: 8300000, guid: 1e086101eba792245bff8a57ee1e1e29, type: 3}
-  onCrowFly: {fileID: 8300000, guid: dff7b4c65368b9d4e90fbca12176e0fc, type: 3}
+  onCrowFly: {fileID: 8300000, guid: 1e086101eba792245bff8a57ee1e1e29, type: 3}
   onCrowCollide: {fileID: 8300000, guid: 8532e3b61f373c341b454ba61e85adbc, type: 3}
   onCloudExplode: {fileID: 8300000, guid: fff706d7679eb4743b0ed3c11dbb5368, type: 3}
   onAddScore: {fileID: 8300000, guid: 4da51512cdf77904e9c079aabe972b59, type: 3}
