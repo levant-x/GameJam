@@ -9,6 +9,7 @@ public class CursorController : MonoBehaviour
     Vector3 currentCursorPoint;
 
     public float DelayBetweenClickOnCloud { get; private set; }
+    public CursorAnimator cursorAnimator;
 
     public void ResetTimerOnClick()
     {
