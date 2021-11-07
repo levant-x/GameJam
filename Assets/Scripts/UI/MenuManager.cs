@@ -119,6 +119,7 @@ public class MenuManager : MonoBehaviour
         var overlayColor = imgOverlay.color;
         var a = transparent ? 0 : overlayInitTransparency;
         imgOverlay.color = new Color(overlayColor.r, overlayColor.g, overlayColor.b, a);
+        imgOverlay.raycastTarget = !transparent;
     }
 
     private static void Play()
