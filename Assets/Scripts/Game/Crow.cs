@@ -14,10 +14,16 @@ public class Crow : MonoBehaviour, IPointerClickHandler
     public float flyDuration = 3f;
 
     Vector3 startPosition;
+    SoundsManager SoundManager;
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        SoundManager.PlayCrowCollide();
+    }
 
     private void Awake()
     {
         startPosition = transform.position;
+        SoundManager = FindObjectOfType<SoundsManager>();
     }
 
     public void Launch()
@@ -53,6 +59,7 @@ public class Crow : MonoBehaviour, IPointerClickHandler
     {
         if (IsLaunch && !IsReturn)
         {
+            SoundManager.PlayCrowFly();
             Return();
         }
     }

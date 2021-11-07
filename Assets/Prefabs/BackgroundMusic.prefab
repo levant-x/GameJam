@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6ee1f715f23f91d4ea39584feb8f5996, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -143,3 +143,18 @@ MonoBehaviour:
   audioplayer: {fileID: 6924680576733641225}
   onHoverSound: {fileID: 8300000, guid: e38116eba134a684d868974bcae24914, type: 3}
   onClickSound: {fileID: 8300000, guid: 01632c2ce8a78704eb0731dd469c4638, type: 3}
+  onCrowAppear: {fileID: 8300000, guid: 1e086101eba792245bff8a57ee1e1e29, type: 3}
+  onCrowFly: {fileID: 8300000, guid: 1e086101eba792245bff8a57ee1e1e29, type: 3}
+  onCrowCollide: {fileID: 8300000, guid: 8532e3b61f373c341b454ba61e85adbc, type: 3}
+  onCloudExplode: {fileID: 8300000, guid: fff706d7679eb4743b0ed3c11dbb5368, type: 3}
+  onAddScore: {fileID: 8300000, guid: 4da51512cdf77904e9c079aabe972b59, type: 3}
+  onBlockFirstCollide:
+  - {fileID: 8300000, guid: 92544e90794475c4f93d5e83eb3ea2ef, type: 3}
+  - {fileID: 8300000, guid: 58124ecd5a9bca74f852176a72c595b5, type: 3}
+  - {fileID: 8300000, guid: 5696b12eb33073040b7b1c8bb001334d, type: 3}
+  onBlockNextCollide:
+  - {fileID: 8300000, guid: 24f1b4ef00bfbe24d8db9918579e99b5, type: 3}
+  - {fileID: 8300000, guid: 9efb4a8f70b9fde46905fed74a74497a, type: 3}
+  - {fileID: 8300000, guid: 101ed5ce004b1f14a9c4b1d4358dc58c, type: 3}
+  - {fileID: 8300000, guid: 02f76181940d3f04eb7533c3049a1abd, type: 3}
+  - {fileID: 8300000, guid: 4abaaf840bde339479030f44245738c3, type: 3}
