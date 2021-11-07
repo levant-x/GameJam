@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,9 +14,12 @@ public class CloudSpawner : MonoBehaviour
     public Collider2D myCollider;
     public Transform spawnPoint;
     public Transform blockContainer;
-
+    public SpriteRenderer Cloud;
+    public Animator CloudExplode;
+    public float AnimationDuration = 0.3f;
+    public float AnimationUnhideDuration = 0.3f;
     public float DropDelay = 1.5f;
-    public float ResetDelay = 1f;
+    public float ResetDelay = 1.5f;
     public Vector3 WindDirection;
     private void Awake()
     {
@@ -30,13 +34,24 @@ public class CloudSpawner : MonoBehaviour
         myCollider.enabled = false;
         template.transform.SetParent(blockContainer);
         template.WakeUp();
+        CloudExplode.Play("CloudExplode");
+        StartCoroutine(Hide());
         template = null;
+    }
+
+    IEnumerator Hide()
+    {
+        yield return new WaitForSeconds(AnimationDuration);
+        Cloud.DOFade(0, 0);
+        yield return new WaitForSeconds(ResetDelay - AnimationDuration - AnimationUnhideDuration);
+        Cloud.DOFade(1, AnimationUnhideDuration);
     }
 
     void Update()
     {
         if(time > ResetDelay)
         {
+            CloudExplode.gameObject.SetActive(true);
             int ind = Random.Range(0, Prefab.Length);
             var temp = Instantiate(Prefab[ind], spawnPoint);
             template = temp.GetComponent<BuildingBlock>();
