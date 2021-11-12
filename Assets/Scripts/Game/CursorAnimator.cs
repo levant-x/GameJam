@@ -24,4 +24,8 @@ public class CursorAnimator : MonoBehaviour
         if (Input.GetMouseButton(0)) SetCursor(CursorType.Grab);
         else SetCursor(CursorType.Pointer);
     }
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 }
