@@ -1,58 +1,65 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class CursorController : MonoBehaviour
+
+namespace MurphyInc
 {
-    public event Action<BuildingBlock> OnClickBuildingBlock = delegate { };
-    public event Action<Collider2D> OnClickObject = delegate { };
-    public event Action OnClickEmpty = delegate { };
-    Vector3 currentCursorPoint;
-
-    public float DelayBetweenClickOnCloud { get; private set; }
-    public CursorAnimator cursorAnimator;
-
-    public void ResetTimerOnClick()
+    public class CursorController : MonoBehaviour
     {
-        DelayBetweenClickOnCloud = 0;
-    }
+        public event Action<BuildingBlock> OnClickBuildingBlock = delegate { };
+        public event Action<Collider2D> OnClickObject = delegate { };
+        public event Action OnClickEmpty = delegate { };
+        Vector3 currentCursorPoint;
 
-    void Update()
-    {
-        DelayBetweenClickOnCloud += Time.deltaTime;
-        if (Input.GetMouseButtonDown(0))
+        public float DelayBetweenClickOnCloud { get; private set; }
+        public CursorAnimator cursorAnimator;
+
+        public void ResetTimerOnClick()
         {
-            var hit = Physics2D.Raycast(CalculateCurrentCursorPos(), Vector2.zero);
-            if (hit)
+            DelayBetweenClickOnCloud = 0;
+        }
+
+        void Update()
+        {
+            DelayBetweenClickOnCloud += Time.deltaTime;
+            if (Input.GetMouseButtonDown(0))
             {
-                if (hit.collider.gameObject.TryGetComponent(out BuildingBlock building))
+                var hit = Physics2D.Raycast(CalculateCurrentCursorPos(), Vector2.zero);
+                if (hit)
                 {
-                    if (!building.IsCaught)
+                    if (hit.collider.gameObject.TryGetComponent(out BuildingBlock building))
                     {
-                        OnClickBuildingBlock?.Invoke(building);
-                        Debug.Log("hit.collider.gameObject " + hit.collider.gameObject.name);
+                        if (!building.IsCaught)
+                        {
+                            OnClickBuildingBlock?.Invoke(building);
+                            Debug.Log("hit.collider.gameObject " + hit.collider.gameObject.name);
+                        }
+                        else
+                        {
+                            OnClickEmpty?.Invoke();
+                        }
                     }
-                    else { OnClickEmpty?.Invoke(); }
-                }
-                else if(hit.collider)
-                {
-                    OnClickObject?.Invoke(hit.collider);
+                    else if (hit.collider)
+                    {
+                        OnClickObject?.Invoke(hit.collider);
+                    }
+                    else
+                    {
+                        OnClickEmpty?.Invoke();
+                    }
                 }
                 else
                 {
                     OnClickEmpty?.Invoke();
                 }
             }
-            else
-            {
-                OnClickEmpty?.Invoke();
-            }
         }
-    }
-        
-    public Vector3 CalculateCurrentCursorPos()
-    {
-        currentCursorPoint = Input.mousePosition;
-        currentCursorPoint.z = -Camera.main.transform.position.z;
-        return Camera.main.ScreenToWorldPoint(currentCursorPoint);
+
+        public Vector3 CalculateCurrentCursorPos()
+        {
+            currentCursorPoint = Input.mousePosition;
+            currentCursorPoint.z = -Camera.main.transform.position.z;
+            return Camera.main.ScreenToWorldPoint(currentCursorPoint);
+        }
     }
 }

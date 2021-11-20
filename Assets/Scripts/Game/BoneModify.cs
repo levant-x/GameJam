@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoneModify : MonoBehaviour
+namespace MurphyInc.Core.Items
 {
-    private void Start()
+    public class BoneModify : MonoBehaviour
     {
-        float rand = Random.Range(0f, 1f);
-        if (rand > 0.5f)
-            transform.Rotate(Vector3.forward, 90f);
+        private void Start()
+        {
+            float rand = Random.Range(0f, 1f);
+            if (rand > 0.5f)
+                transform.Rotate(Vector3.forward, 90f);
+        }
     }
 }

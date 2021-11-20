@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BoosterScene : MonoBehaviour
+namespace MurphyInc
 {
-    void Start()
+    public class BoosterScene : MonoBehaviour
     {
-        SceneManager.LoadScene("Menu");
+        void Start()
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 }

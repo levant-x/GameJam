@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Texts_en
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: en
+    m_Code: 
   m_SharedData: {fileID: 11400000, guid: 95f3c4be4bffefc4bb93e9c6029eb588, type: 2}
   m_Metadata:
     m_Items: []

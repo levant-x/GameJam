@@ -23,6 +23,7 @@ MonoBehaviour:
   m_NonRecursiveBuilding: 0
   m_maxConcurrentWebRequests: 500
   m_ContiguousBundles: 0
+  m_StripUnityVersionFromBundleBuild: 0
   m_DisableVisibleSubAssetRepresentations: 0
   m_ShaderBundleNaming: 0
   m_ShaderBundleCustomNaming: 
@@ -40,6 +41,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6baf2f89cc1a9934a994cfed7c3dfc2f, type: 2}
   - {fileID: 11400000, guid: eeee9fabea3a6624d8c3ac40fed21db7, type: 2}
   - {fileID: 11400000, guid: dce9d412b2750754bb85d276cf7e9e26, type: 2}
+  - {fileID: 11400000, guid: 5d978cf62fc80b147bf2c23babebaa9c, type: 2}
+  - {fileID: 11400000, guid: 757f4e5a11f6b9640bb05cfa03a51ad7, type: 2}
+  - {fileID: 11400000, guid: c5d8274c085fa864dbec9d8af98ab6b6, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -84,6 +88,8 @@ MonoBehaviour:
     - Locale-en
     - Locale-ru
     - Locale
+    - Locale-
+    - Locale-de
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 8ef2b4ebcb7f20f4c889a59fc5e80ec7, type: 2}

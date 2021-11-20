@@ -1,11 +1,14 @@
 ﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using MurphyInc;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
-public class CloudSpawner : MonoBehaviour
+public class CloudSpawner : MonoBehaviour, IPointerClickHandler
 {
     public GameObject[] Prefab;
     float time;
@@ -24,21 +27,17 @@ public class CloudSpawner : MonoBehaviour
 
     SoundsManager soundsManager;
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OnClick();
+    }
     private void Awake()
     {
-        //CursorController.OnClickObject += OnClick;
-        CloudClick.OnClickCloud += OnClick;
         soundsManager = FindObjectOfType<SoundsManager>();
     }
 
-    void Test(Collider2D sender)
+    private void OnClick()
     {
-        Debug.Log("sender: " + sender.name);
-    }
-
-    private void OnClick(Collider2D collider)
-    {
-        if (myCollider != collider) return;
         if (CursorController.DelayBetweenClickOnCloud < DropDelay) return;
         CursorController.ResetTimerOnClick();
         myCollider.enabled = false;
@@ -67,6 +66,7 @@ public class CloudSpawner : MonoBehaviour
             var temp = Instantiate(Prefab[ind], spawnPoint);
             template = temp.GetComponent<BuildingBlock>();
             template.Sleep();
+            
             myCollider.enabled = true;
             time = 0;
         }
@@ -74,11 +74,6 @@ public class CloudSpawner : MonoBehaviour
             time += Time.deltaTime;
 
         transform.position += WindDirection;
-    }
-
-    private void OnDestroy()
-    {
-        CursorController.OnClickObject -= OnClick;
     }
 }
 
