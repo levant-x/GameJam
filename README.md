@@ -1,0 +1,1 @@
+Created as a thematic Game Jam product dedicated to Murphy's law subject on Halloween. Click the clowds to drop the blocks and stack those as high as you can, but beware of some events that may arise.
